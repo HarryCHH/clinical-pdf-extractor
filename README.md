@@ -19,3 +19,13 @@ python -m pip install -e ".[dev]"
 pytest
 cpe path/to/file.pdf --out out --tables
 ```
+
+# make changes
+ruff check . --fix
+black .
+pytest -q
+mypy --config-file pyproject.toml src/clinical_pdf_extractor
+
+git add .
+git commit -m "Describe change"
+git push
