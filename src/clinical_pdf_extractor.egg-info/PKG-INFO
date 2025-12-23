@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: clinical-pdf-extractor
+Version: 0.0.1
+Summary: Mini project: extract text/tables from clinical trial PDFs with traceable outputs.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: pypdf>=6.0
+Requires-Dist: pdfplumber>=0.11
+Requires-Dist: pandas>=2.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: black>=24.0; extra == "dev"
+Requires-Dist: mypy>=1.8; extra == "dev"
+Requires-Dist: types-PyYAML; extra == "dev"
+
+# clinical-pdf-extractor
+
+Mini project scaffold to extract **text** and **tables** from clinical trial PDFs with traceable outputs.
+
+## Quickstart
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -e ".[dev]"
+pytest
+cpe path/to/file.pdf --out out --tables
+```

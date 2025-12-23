@@ -1,0 +1,2 @@
+[console_scripts]
+cpe = clinical_pdf_extractor.cli:main

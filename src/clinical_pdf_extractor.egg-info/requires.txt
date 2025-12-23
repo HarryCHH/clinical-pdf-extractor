@@ -1,0 +1,10 @@
+pypdf>=6.0
+pdfplumber>=0.11
+pandas>=2.0
+
+[dev]
+pytest>=8.0
+ruff>=0.6
+black>=24.0
+mypy>=1.8
+types-PyYAML
