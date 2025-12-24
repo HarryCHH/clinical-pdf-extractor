@@ -1,3 +1,4 @@
+![CI](https://github.com/HarryCH/clinical-pdf-extractor/actions/workflows/ci.yml/badge.svg)
 # clinical-pdf-extractor
 
 A small, practical mini-project to extract **text** and **tables** from PDFs (e.g. clinical documents) with traceable outputs.
@@ -21,6 +22,7 @@ cpe path/to/file.pdf --out out --tables
 ```
 
 # make changes
+```bash
 ruff check . --fix
 black .
 pytest -q
@@ -29,3 +31,13 @@ mypy --config-file pyproject.toml src/clinical_pdf_extractor
 git add .
 git commit -m "Describe change"
 git push
+
+# extract + clean + tables + chunks + manifest
+cpe ./your.pdf --out out --tables --chunks
+
+# quality checks
+ruff check . --fix
+black .
+mypy --config-file pyproject.toml src/clinical_pdf_extractor
+pytest -q
+```
